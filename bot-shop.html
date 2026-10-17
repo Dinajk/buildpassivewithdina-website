@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ready-made AI bots that help you find product ideas, write your website and plan your content.">
+  <meta name="theme-color" content="#1e1a1c">
+  <meta property="og:title" content="Bot Shop | Build Passive with Dina">
+  <meta property="og:description" content="Ready-made AI bots that help you find product ideas, write your website and plan your content.">
+  <meta property="og:image" content="assets/brand/profile-picture.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Apply the saved theme before first paint to avoid a light flash
+       for dark-mode users. Kept inline on purpose. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("site-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+          document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    })();
+  </script>
+  <title>Bot Shop | Build Passive with Dina</title>
+
+  <!-- Fonts: Inter (all sans-serif). Swap the family in css/style.css → --font-base -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="assets/fonts/playfair-display-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=20261017c">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Build Passive with Dina, home">
+        <svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24"/>
+          <text class="logo-mark-ink" x="22.5" y="33.5" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="600" font-size="28">D</text>
+          <path class="logo-mark-ink" transform="translate(31 8) scale(.42)" d="M12 0c.6 5.6 6.4 11.4 12 12-5.6.6-11.4 6.4-12 12-.6-5.6-6.4-11.4-12-12C5.6 11.4 11.4.6 12 0z"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-text-main">Build Passive</span>
+          <span class="logo-text-sub logo-accent">with Dina</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="index.html#courses" class="nav-link">Courses</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="bot-shop.html" class="nav-link active" aria-current="page">Shop</a></li>
+          <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="index.html#contact" class="btn btn-primary btn-sm nav-cta">Work with Me</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="page-hero">
+      <div class="container hero-content">
+        <p class="hero-eyebrow animate-on-load" style="--delay: 0">Bot Shop</p>
+        <h1 class="hero-title animate-on-load" style="--delay: 1">AI bots for <span class="hero-title-accent">your business</span></h1>
+        <p class="hero-subtitle animate-on-load" style="--delay: 2">Ready-made AI assistants that walk you through the work, step by step: finding product ideas, writing your website and planning your content.</p>
+        <div class="hero-actions animate-on-load" style="--delay: 3">
+          <a href="#bots" class="btn btn-primary btn-lg">See the bots <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <p class="shop-trust animate-on-load" style="--delay: 4">Beginner friendly. Every bot comes with simple instructions so you can start in minutes.</p>
+      </div>
+    </section>
+
+    <section class="section" id="bots">
+      <div class="container">
+        <div class="section-head animate-on-scroll">
+          <span class="section-eyebrow">The Collection</span>
+          <h2 class="section-title">Pick your AI tool</h2>
+          
+        </div>
+        <div class="shop-stack">
+          <!-- LIVE PRODUCT: Canva Code Prompt Library -->
+          <article class="shop-card animate-on-scroll">
+            <a class="shop-card-media" href="canva-code-prompt-library.html">
+              <img src="assets/shop/canva-code-card.jpg" alt="Canva Code Prompt Library shown on a laptop, tablet and product box" loading="lazy" decoding="async">
+            </a>
+            <div class="shop-card-body">
+              <span class="shop-pill"><span class="shop-pill-new">New</span> &middot; Prompt library</span>
+              <h3>Canva Code Prompt Library</h3>
+              <p>Done-for-you prompts that turn complete beginners into digital product creators. Copy, paste into Canva Code, and watch planners, trackers, journals and workbooks build themselves in minutes.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>105 tested prompts, with new ones added regularly</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Video tutorials to get you started</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Bonus launch plan to sell your first product</span></li></ul>
+              <div class="shop-card-foot">
+                <span class="shop-price">$29</span>
+                <a href="canva-code-prompt-library.html" class="btn btn-dark">Get it for $29 <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <!-- PLACEHOLDER PRODUCT: when this bot is ready, set the price and
+               point the button to its ThriveCart or product page link -->
+          <article class="shop-card animate-on-scroll">
+            <div class="shop-card-media">
+              <img src="assets/shop/bot-website.jpg" alt="Preview of the Website Copy Bot chatting with a user" loading="lazy" decoding="async">
+            </div>
+            <div class="shop-card-body">
+              <span class="shop-pill"><span class="shop-pill-new">Coming soon</span> &middot; Website</span>
+              <h3>Website Copy Bot</h3>
+              <p>Get every word on your website written for you, from the first headline to the last FAQ, in a voice that sounds like you.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Homepage and about page copy</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Clear service and product descriptions</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>FAQ answers your customers need</span></li></ul>
+              <div class="shop-card-foot">
+                <span class="shop-price">Price coming soon</span>
+                <a href="mailto:hello@buildpassivewithdina.com?subject=Notify%20me:%20Website%20Copy%20Bot" class="btn btn-dark">Get notified <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <!-- PLACEHOLDER PRODUCT: when this bot is ready, set the price and
+               point the button to its ThriveCart or product page link -->
+          <article class="shop-card animate-on-scroll">
+            <div class="shop-card-media">
+              <img src="assets/shop/bot-content.jpg" alt="Preview of the Content Planner Bot chatting with a user" loading="lazy" decoding="async">
+            </div>
+            <div class="shop-card-body">
+              <span class="shop-pill"><span class="shop-pill-new">Coming soon</span> &middot; Content</span>
+              <h3>Content Planner Bot</h3>
+              <p>Never wonder what to post again. This bot builds a full month of Instagram and YouTube content around what you sell.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>A 30-day post and video plan</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Captions in your brand voice</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>A simple posting schedule</span></li></ul>
+              <div class="shop-card-foot">
+                <span class="shop-price">Price coming soon</span>
+                <a href="mailto:hello@buildpassivewithdina.com?subject=Notify%20me:%20Content%20Planner%20Bot" class="btn btn-dark">Get notified <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container shop-more animate-on-scroll">
+        <span class="section-eyebrow">Coming soon</span>
+        <h2 class="section-title">More bots on the way</h2>
+        <p class="section-subtitle">I am building new AI bots for creators and small business owners. Follow along on Instagram to see them first.</p>
+        <a href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener" class="btn btn-dark">Follow on Instagram <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Build Passive with Dina, back to top">
+        <svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24"/>
+          <text class="logo-mark-ink" x="22.5" y="33.5" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="600" font-size="28">D</text>
+          <path class="logo-mark-ink" transform="translate(31 8) scale(.42)" d="M12 0c.6 5.6 6.4 11.4 12 12-5.6.6-11.4 6.4-12 12-.6-5.6-6.4-11.4-12-12C5.6 11.4 11.4.6 12 0z"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-text-main">Build Passive</span>
+          <span class="logo-text-sub logo-accent">with Dina</span>
+        </span>
+        </a>
+        <p class="footer-tagline">
+          Clear, step-by-step guidance for building your business with AI.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.91 1.17 4 4 0 0 1 7.91-1.17z"/><path d="M17.5 6.5h.01"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li><a href="bot-shop.html">Shop</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@buildpassivewithdina.com">hello@buildpassivewithdina.com</a></li>
+          <li><a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Build Passive with Dina. All rights reserved.</p>
+      <a href="index.html" class="footer-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

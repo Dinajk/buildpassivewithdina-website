@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn to create digital products, build your website and grow your business with AI. Step-by-step courses, AI bots and websites from Dina.">
+  <meta name="theme-color" content="#1e1a1c">
+  <meta property="og:title" content="Build Passive with Dina">
+  <meta property="og:description" content="Step-by-step guidance on using AI to create digital products, websites and passive income.">
+  <meta property="og:image" content="assets/brand/profile-picture.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Apply the saved theme before first paint to avoid a light flash
+       for dark-mode users. Kept inline on purpose. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("site-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+          document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- The hero photo is the largest contentful paint; fetch it early -->
+  <link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+  <title>Build Passive with Dina | AI for Digital Product Creators</title>
+
+  <!-- Fonts: Inter (all sans-serif). Swap the family in css/style.css → --font-base -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="assets/fonts/playfair-display-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=20261017c">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       Sticky header. Gets .scrolled class via JS after 50px scroll.
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Build Passive with Dina, home">
+        <svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24"/>
+          <text class="logo-mark-ink" x="22.5" y="33.5" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="600" font-size="28">D</text>
+          <path class="logo-mark-ink" transform="translate(31 8) scale(.42)" d="M12 0c.6 5.6 6.4 11.4 12 12-5.6.6-11.4 6.4-12 12-.6-5.6-6.4-11.4-12-12C5.6 11.4 11.4.6 12 0z"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-text-main">Build Passive</span>
+          <span class="logo-text-sub logo-accent">with Dina</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#courses" class="nav-link">Courses</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="bot-shop.html" class="nav-link">Shop</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Work with Me</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============================================================
+         HERO — full-background image with dark overlay
+         To use a photo: set --hero-image in css/style.css, e.g.
+         --hero-image: url("../assets/hero.jpg");
+         A layered gradient is used as the default placeholder.
+    ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow animate-on-load" style="--delay: 0">AI for digital product creators</p>
+
+        <h1 class="hero-title animate-on-load" style="--delay: 1">
+          Build a business that earns <span class="hero-title-accent">while you sleep</span>
+        </h1>
+
+        <p class="hero-subtitle animate-on-load" style="--delay: 2">
+          Learn to create digital products, build your website and grow your
+          business with AI. Clear, step-by-step guidance, no tech background needed.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOGO MARQUEE — infinite "trusted by" strip.
+         Wordmarks are styled text placeholders; swap per project.
+         The second group is a clone that keeps the loop seamless.
+    ============================================================ -->
+    <section class="logos logos-home" aria-label="Topics">
+      <div class="marquee">
+        <div class="marquee-track">
+          <ul class="marquee-group">
+            <li class="marquee-item wm-serif-italic">Digital products</li>
+            <li class="marquee-item wm-caps">AI prompts</li>
+            <li class="marquee-item wm-serif">Websites with AI</li>
+            <li class="marquee-item wm-bold">Passive income</li>
+            <li class="marquee-item wm-serif-italic">Online courses</li>
+            <li class="marquee-item wm-caps">Content creation</li>
+          </ul>
+          <ul class="marquee-group" aria-hidden="true">
+            <li class="marquee-item wm-serif-italic">Digital products</li>
+            <li class="marquee-item wm-caps">AI prompts</li>
+            <li class="marquee-item wm-serif">Websites with AI</li>
+            <li class="marquee-item wm-bold">Passive income</li>
+            <li class="marquee-item wm-serif-italic">Online courses</li>
+            <li class="marquee-item wm-caps">Content creation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES — split header + image card grid
+    ============================================================ -->
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="services-header">
+          <div class="services-header-main animate-on-scroll">
+            <span class="section-eyebrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+              What I Offer
+            </span>
+            <h2 class="section-title align-left">How I can<br>help you</h2>
+          </div>
+          <div class="services-header-side animate-on-scroll">
+            <p class="services-header-text">
+              Ready-made AI bots to save you hours, or a professional website
+              built with AI. Pick what fits where you are today.
+            </p>
+            <a href="#contact" class="btn btn-dark">
+              Ask me anything
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="services-grid services-grid-2">
+
+          <a href="bot-shop.html" class="service-card animate-on-scroll">
+            <img src="assets/services/products-wide.jpg" alt="AI bots and prompt packs for creators" loading="lazy" decoding="async">
+            <span class="service-card-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </span>
+            <span class="service-card-label">AI Bots &amp; Digital Products</span>
+          </a>
+
+          <a href="ai-websites.html" class="service-card animate-on-scroll">
+            <img src="assets/services/websites-wide.jpg" alt="A professional website built with AI" loading="lazy" decoding="async">
+            <span class="service-card-arrow" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </span>
+            <span class="service-card-label">AI Website Building</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT — split media + content
+    ============================================================ -->
+    <!-- PROMO BANNER: placeholder offer, update the text before launch -->
+    <section class="st-promo">
+      <div class="container st-promo-inner animate-on-scroll">
+        <div>
+          <span class="st-promo-tag">Limited offer</span>
+          <h2>Get 25% off your first purchase!</h2>
+          <p>Promo text goes here. Add your discount code or offer details.</p>
+        </div>
+        <a href="bot-shop.html" class="btn btn-dark btn-lg">Shop Now <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-media animate-on-scroll">
+            <img src="assets/about.jpg" alt="Dina, founder of Build Passive with Dina, holding her laptop" loading="lazy" decoding="async">
+          </div>
+
+          <div class="about-content animate-on-scroll">
+            <span class="section-eyebrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              About Dina
+            </span>
+            <h2 class="section-title align-left">Hi, I'm Dina. Let's build your business with AI</h2>
+            <p class="about-text">
+              I started Build Passive with Dina to share what I am learning about
+              creating digital products and growing an online business with AI.
+              On my YouTube channel I build in public, so you see the real tools
+              and the real process.
+            </p>
+            <p class="about-text">
+              My teaching style is simple: clear steps, plain language and no tech
+              background required. Bring your idea, and I will help you turn it
+              into something you can sell.
+            </p>
+            <ul class="about-list">
+              <li>
+                <span class="about-check" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                Step-by-step lessons
+              </li>
+              <li>
+                <span class="about-check" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                Beginner friendly
+              </li>
+              <li>
+                <span class="about-check" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                Practical AI workflows
+              </li>
+              <li>
+                <span class="about-check" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                Ready-made AI tools
+              </li>
+            </ul>
+            <a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener" class="btn btn-dark">
+              Watch my videos
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         COURSES: step-by-step online courses (placeholders)
+    ============================================================ -->
+    <section class="section courses" id="courses">
+      <div class="container">
+        <div class="section-head animate-on-scroll">
+          <span class="section-eyebrow">Online Courses</span>
+          <h2 class="section-title">Learn it step by step</h2>
+          <p class="section-subtitle">Beginner-friendly video courses that walk you through every click. Follow along at your own pace, on any device.</p>
+        </div>
+        <div class="course-grid">
+          <!-- PLACEHOLDER COURSE: when this course is ready, set the price and
+               point the button to its ThriveCart link -->
+          <article class="course-card animate-on-scroll">
+            <img src="assets/courses/course-products.jpg" alt="Digital Products with AI course cover" loading="lazy" decoding="async">
+            <div class="course-body">
+              <span class="shop-pill"><span class="shop-pill-new">Coming soon</span> &middot; Online course</span>
+              <h3>Digital Products with AI</h3>
+              <p>Go from idea to your first digital product for sale, using AI at every step.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Find a product idea people want</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Create your product with AI</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Set up checkout and launch</span></li></ul>
+              <div class="course-foot">
+                <span class="shop-price">Price coming soon</span>
+                <a href="mailto:hello@buildpassivewithdina.com?subject=Course%20waitlist:%20Digital%20Products%20with%20AI" class="btn btn-dark btn-sm">Join the waitlist</a>
+              </div>
+            </div>
+          </article>
+          <!-- PLACEHOLDER COURSE: when this course is ready, set the price and
+               point the button to its ThriveCart link -->
+          <article class="course-card animate-on-scroll">
+            <img src="assets/courses/course-website.jpg" alt="Build Your Website with AI course cover" loading="lazy" decoding="async">
+            <div class="course-body">
+              <span class="shop-pill"><span class="shop-pill-new">Coming soon</span> &middot; Online course</span>
+              <h3>Build Your Website with AI</h3>
+              <p>Create a professional website for your business without writing code.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Plan your pages and copy</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Build and style your site with AI</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Go live on your own domain</span></li></ul>
+              <div class="course-foot">
+                <span class="shop-price">Price coming soon</span>
+                <a href="mailto:hello@buildpassivewithdina.com?subject=Course%20waitlist:%20Build%20Your%20Website%20with%20AI" class="btn btn-dark btn-sm">Join the waitlist</a>
+              </div>
+            </div>
+          </article>
+          <!-- PLACEHOLDER COURSE: when this course is ready, set the price and
+               point the button to its ThriveCart link -->
+          <article class="course-card animate-on-scroll">
+            <img src="assets/courses/course-business.jpg" alt="AI for Your Business course cover" loading="lazy" decoding="async">
+            <div class="course-body">
+              <span class="shop-pill"><span class="shop-pill-new">Coming soon</span> &middot; Online course</span>
+              <h3>AI for Your Business</h3>
+              <p>Learn simple AI workflows that save you hours every week.</p>
+              <ul class="shop-list"><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Write content and emails faster</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Plan your marketing with AI</span></li><li><span class="about-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Automate everyday tasks</span></li></ul>
+              <div class="course-foot">
+                <span class="shop-price">Price coming soon</span>
+                <a href="mailto:hello@buildpassivewithdina.com?subject=Course%20waitlist:%20AI%20for%20Your%20Business" class="btn btn-dark btn-sm">Join the waitlist</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REVIEWS — full-width testimonial slider
+         Reusable slider: .slider > .slider-track > slides.
+         JS (main.js) wires arrows, dots, swipe and autoplay.
+    ============================================================ -->
+    <section class="section reviews grain" id="reviews">
+      <div class="container reviews-layout slider animate-on-scroll" id="reviews-slider" aria-roledescription="carousel" aria-label="Student reviews">
+        <div class="reviews-side">
+          <h2 class="section-title align-left">What students say</h2>
+          <p class="reviews-side-text">
+            Every creator starts somewhere. Join the community on YouTube
+            and build alongside people just like you.
+          </p>
+          <a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener" class="btn btn-glass reviews-google-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            Subscribe on YouTube
+          </a>
+        </div>
+
+        <div class="slider-viewport">
+          <div class="slider-track">
+
+            <figure class="review-slide">
+              <div class="review-stars" aria-label="Rated 5 out of 5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              </div>
+              <!-- PLACEHOLDER: replace with a real review -->
+              <span class="review-sample-tag">Sample</span>
+              <blockquote class="review-quote">
+                I had an idea for a digital product for months. Dina's step-by-step
+                lessons finally helped me create it and put it up for sale.
+              </blockquote>
+              <figcaption class="review-author">
+                <img src="assets/avatar-1.jpg" alt="" loading="lazy" decoding="async">
+                <span class="review-name">Student Name</span>
+                <span class="review-role">Sample review, replace before launch</span>
+              </figcaption>
+            </figure>
+
+            <figure class="review-slide">
+              <div class="review-stars" aria-label="Rated 5 out of 5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              </div>
+              <!-- PLACEHOLDER: replace with a real review -->
+              <span class="review-sample-tag">Sample</span>
+              <blockquote class="review-quote">
+                I was nervous about using AI, but everything was explained so clearly.
+                I now use it every day in my business.
+              </blockquote>
+              <figcaption class="review-author">
+                <img src="assets/avatar-2.jpg" alt="" loading="lazy" decoding="async">
+                <span class="review-name">Student Name</span>
+                <span class="review-role">Sample review, replace before launch</span>
+              </figcaption>
+            </figure>
+
+            <figure class="review-slide">
+              <div class="review-stars" aria-label="Rated 5 out of 5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              </div>
+              <!-- PLACEHOLDER: replace with a real review -->
+              <span class="review-sample-tag">Sample</span>
+              <blockquote class="review-quote">
+                Dina helped me build a website I am proud to share. It looks
+                professional and it only took a weekend.
+              </blockquote>
+              <figcaption class="review-author">
+                <img src="assets/avatar-3.jpg" alt="" loading="lazy" decoding="async">
+                <span class="review-name">Student Name</span>
+                <span class="review-role">Sample review, replace before launch</span>
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" data-dir="-1" aria-label="Previous review">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div class="slider-dots" role="tablist" aria-label="Choose review"></div>
+          <button class="slider-btn" data-dir="1" aria-label="Next review">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ — split header + accordion
+    ============================================================ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+
+        <div class="faq-header animate-on-scroll">
+          <span class="section-eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>
+            </svg>
+            FAQ
+          </span>
+          <h2 class="section-title">Questions, answered</h2>
+          <p class="section-subtitle">
+            The questions I hear most often. If yours is not here,
+            I am one message away.
+          </p>
+        </div>
+
+        <div class="faq-list animate-on-scroll">
+          <div class="faq-item">
+            <h3 class="faq-heading">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-panel-1">
+                Do I need tech skills to get started?
+                <span class="faq-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-panel-1">
+              <div class="faq-answer-inner">
+                <p>No. Everything is explained step by step, from your first AI prompt to publishing your product. If you can use email and a web browser, you can follow along.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-heading">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-panel-2">
+                Which AI tools will I learn to use?
+                <span class="faq-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-panel-2">
+              <div class="faq-answer-inner">
+                <p>I teach beginner-friendly AI tools for writing, design and website building, and show exactly how I use them in my own business. You learn workflows you can repeat, not just tool names.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-heading">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-panel-3">
+                How will the courses work?
+                <span class="faq-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-panel-3">
+              <div class="faq-answer-inner">
+                <p>Each course is a step-by-step video program you can follow at your own pace, on any device. The first courses are being created right now. Join the waitlist to hear first when they open.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-heading">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-panel-4">
+                How do I get my digital products after buying?
+                <span class="faq-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-panel-4">
+              <div class="faq-answer-inner">
+                <p>Checkout is handled securely through ThriveCart. Right after your purchase you get access by email, so you can start the same day.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-heading">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-panel-5">
+                Can you build my website for me?
+                <span class="faq-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-panel-5">
+              <div class="faq-answer-inner">
+                <p>Yes. I can build a professional website for you with AI, or guide you while you build it yourself. Send me a message about what you need and I will reply with the next steps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cta animate-on-scroll">
+          <a href="#contact" class="btn btn-dark">
+            Ask Dina
+            <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT — details + Fillout form, map beneath
+    ============================================================ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-layout">
+
+        <div class="contact-side animate-on-scroll">
+          <span class="section-eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/>
+            </svg>
+            Contact
+          </span>
+          <h2 class="section-title align-left">Let's build something together</h2>
+          <p class="contact-side-text">
+            Questions about a course, a bot or a website? Send me a
+            message and I will get back to you soon.
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              </span>
+              <span class="contact-detail-text">
+                <span class="contact-detail-label">Email</span>
+                <a class="contact-detail-value" href="mailto:hello@buildpassivewithdina.com">hello@buildpassivewithdina.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+              </span>
+              <span class="contact-detail-text">
+                <span class="contact-detail-label">YouTube</span>
+                <a class="contact-detail-value" href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener">@BuildPassivewithDina</a>
+              </span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.91 1.17 4 4 0 0 1 7.91-1.17z"/><path d="M17.5 6.5h.01"/></svg>
+              </span>
+              <span class="contact-detail-text">
+                <span class="contact-detail-label">Instagram</span>
+                <a class="contact-detail-value" href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener">@buildpassivewithdina</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-card animate-on-scroll">
+          <!-- CONTACT FORM TO-DO: once the Fillout form exists, delete the
+               .contact-email-card block below and uncomment the Fillout div,
+               replacing YOUR_FORM_ID with the real form ID.
+          <div data-fillout-id="YOUR_FORM_ID"
+               data-fillout-embed-type="standard"
+               data-fillout-inherit-parameters
+               data-fillout-dynamic-resize
+               style="width:100%;min-height:480px"></div>
+          -->
+          <div class="contact-email-card">
+            <h3>Tell me about your idea, your business or the website you have in mind.</h3>
+            <p>I read every message personally.</p>
+            <a href="mailto:hello@buildpassivewithdina.com" class="btn btn-dark">
+              Email Dina
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- NEWSLETTER: connect this form to your email tool before launch -->
+    <section class="st-news">
+      <div class="container st-news-inner animate-on-scroll">
+        <h2>Subscribe to our newsletter</h2>
+        <p>Short text about what subscribers get: new products, freebies and tips.</p>
+        <form class="st-news-form" action="#" onsubmit="return false;">
+          <label class="sr-only" for="news-email">Email address</label>
+          <input id="news-email" type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER — dark closer with giant wordmark
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="Build Passive with Dina, back to top">
+        <svg class="logo-mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24"/>
+          <text class="logo-mark-ink" x="22.5" y="33.5" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="600" font-size="28">D</text>
+          <path class="logo-mark-ink" transform="translate(31 8) scale(.42)" d="M12 0c.6 5.6 6.4 11.4 12 12-5.6.6-11.4 6.4-12 12-.6-5.6-6.4-11.4-12-12C5.6 11.4 11.4.6 12 0z"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-text-main">Build Passive</span>
+          <span class="logo-text-sub logo-accent">with Dina</span>
+        </span>
+        </a>
+        <p class="footer-tagline">
+          Clear, step-by-step guidance for building your business with AI.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.91 1.17 4 4 0 0 1 7.91-1.17z"/><path d="M17.5 6.5h.01"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="bot-shop.html">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@buildpassivewithdina.com">hello@buildpassivewithdina.com</a></li>
+          <li><a href="https://www.youtube.com/@BuildPassivewithDina" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.instagram.com/buildpassivewithdina/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Build Passive with Dina. All rights reserved.</p>
+      <a href="#hero" class="footer-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+
+  </footer>
+
+
+  <script src="js/main.js"></script>
+  <!-- Fillout embed loader: uncomment together with the form above
+  <script src="https://server.fillout.com/embed/v1/" async></script> -->
+</body>
+</html>
