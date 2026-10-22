@@ -2544,3 +2544,6 @@ a.contact-detail-value:hover {
 .et-hero > .container { width: 100%; }
 .et-hero { min-height: 115vh; min-height: 115svh; padding-block: calc(var(--header-height) + 7rem) 8rem; }
 @media (max-width: 900px) { .et-hero { min-height: auto; padding-block: calc(var(--header-height) + var(--space-8)) var(--space-9); } }
+/* Shop card: show the whole mockup, no cropping */
+.shop-media-fit { display: flex; align-items: center; justify-content: center; padding: var(--space-6); background-image: radial-gradient(circle at 85% 10%, rgba(255,255,255,.6), transparent 45%), linear-gradient(160deg, #f6e8e5 0%, #e2beba 100%); }
+.shop-media-fit img { object-fit: contain; aspect-ratio: auto; height: auto; filter: drop-shadow(0 18px 24px rgba(30, 26, 28, 0.25)); }
