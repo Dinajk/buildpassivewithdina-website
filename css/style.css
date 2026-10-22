@@ -2542,3 +2542,5 @@ a.contact-detail-value:hover {
 /* Etsy course: taller dark header */
 .et-hero { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding-block: calc(var(--header-height) + var(--space-9)) var(--space-9); }
 .et-hero > .container { width: 100%; }
+.et-hero { min-height: 115vh; min-height: 115svh; padding-block: calc(var(--header-height) + 7rem) 8rem; }
+@media (max-width: 900px) { .et-hero { min-height: auto; padding-block: calc(var(--header-height) + var(--space-8)) var(--space-9); } }
